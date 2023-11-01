@@ -18,16 +18,22 @@
 
 `hostname [hostname]`
 
+-Configurem una contrasenya amb hash (veurem un hash amb un running config) pel mode EXEC:
 
-enable secret [password]:
+`enable secret [password]`
 
-Explanation: Configures a secret password for accessing privileged exec mode. This password is encrypted and more secure than the plain-text enable password.
-password [password]:
+-Configurem una contrasenya amb text pla (veurem la contrasenya amb text pla amb un running config) pel mode EXEC:
 
-Explanation: Sets the enable password for accessing privileged exec mode. This password is stored in plain text and is less secure than an enable secret.
-line console 0 or line vty 0 15:
+`password [password]`
 
-Explanation: These commands allow you to configure settings for the console or virtual terminal (telnet/SSH) lines. You can set passwords, access restrictions, and other parameters.
+-Entrem a la configuració de les línies virtuals (Telnet o SSH)
+
+`line vty 0 15`
+
+-Entrem a la configuració de les línies físiques (Cable de consola)
+
+`line console 0`
+
 enable password [password] (in line configuration mode):
 
 Explanation: Sets the enable password for accessing privileged exec mode through a specific line (e.g., console or vty). This password is stored in plain text.

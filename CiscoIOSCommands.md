@@ -20,11 +20,11 @@
 
 -Configurem una contrasenya amb hash (veurem un hash amb un running config) pel mode EXEC:
 
-`enable secret [password]`
+`enable secret [contrasenya]`
 
 -Configurem una contrasenya amb text pla (veurem la contrasenya amb text pla amb un running config) pel mode EXEC:
 
-`password [password]`
+`password [contrasenya]`
 
 -Entrem a la configuració de les línies virtuals (Telnet o SSH)
 
@@ -34,16 +34,21 @@
 
 `line console 0`
 
-enable password [password] (in line configuration mode):
+-Configurem la contrasenya del mode exec quan ens conectem en una linia (vty, consola, etc)
 
-Explanation: Sets the enable password for accessing privileged exec mode through a specific line (e.g., console or vty). This password is stored in plain text.
-show running-config:
+`enable password [contrasenya] (in line configuration mode)`
 
-Explanation: Displays the current running configuration of the router, showing all the settings and configurations that are currently in effect.
-show ip interface brief:
+-Mostrem la configuració actual:
 
-Explanation: Provides a brief overview of all the router's interfaces and their current IP addresses and status.
-ping [ip_address]:
+`show running-config`
+
+-Mostrem un resúm de les interfícies amb IPs i estats:
+
+`show ip interface brief`
+
+-Fém un ping a una adreça:
+
+`ping [ip_address]`
 
 Explanation: Used to send ICMP echo requests to test connectivity to a specific IP address. It's a useful diagnostic tool for network troubleshooting.
 traceroute [ip_address]:
